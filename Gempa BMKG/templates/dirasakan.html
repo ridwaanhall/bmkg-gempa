@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2>Gempa Dirasakan</h2>
+    <p>Menampilkan 15 data gempa yang dirasakan.</p>
+    <table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Tanggal</th>
+            <th>Jam</th>
+            <th>Lintang</th>
+            <th>Bujur</th>
+            <th>Magnitude</th>
+            <th>Kedalaman</th>
+            <th>Wilayah</th>
+            <th>Dirasakan</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for gempa in gempas %}
+        <tr>
+            <td>{{ gempa.numbers }}</td>
+            <td>{{gempa.Tanggal}}</td>
+            <td>{{gempa.Jam}}</td>
+            <td>{{gempa.Lintang}}</td>
+            <td>{{gempa.Bujur}}</td>
+            <td>{{gempa.Magnitude}}</td>
+            <td>{{gempa.Kedalaman}}</td>
+            <td>{{gempa.Wilayah}}</td>
+            <td>{{gempa.Dirasakan}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+</div>
+{% endblock %}
+

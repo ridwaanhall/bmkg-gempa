@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+    <!--
+    <table>
+        <tr>
+            <th>Tanggal</th>
+            <th>Jam</th>
+            <th>Lokasi</th>
+            <th>Magnitude</th>
+            <th>Kedalaman</th>
+            <th>Wilayah</th>
+            <th>Potensi</th>
+            <th>Dirasakan</th>
+            <th>Shakemap</th>
+        </tr>
+        <tr>
+            <td>{{ tanggal }}</td>
+            <td>{{ jam }}</td>
+            <td>{{ point }}</td>
+            <td>{{ magnitude }}</td>
+            <td>{{ kedalaman }}</td>
+            <td>{{ wilayah }}</td>
+            <td>{{ potensi }}</td>
+            <td>{{ dirasakan }}</td>
+            <td>https://data.bmkg.go.id/DataMKG/TEWS/{{ shakemap }}</td>
+        </tr>
+    </table>
+    -->
+    <div class="container panel-body"> <!--container-->
+        <h2>Gempa Langsung</h2>
+        <p>https://data.bmkg.go.id/DataMKG/TEWS/{{ shakemap }}</p>
+        <table class="table table-bordered table-light table-hover">
+            <thead>
+            <tr>
+                <th>Tanggal</th>
+                <th>Jam</th>
+                <th>Lokasi</th>
+                <th>Magnitude</th>
+                <th>Kedalaman</th>
+                <th>Wilayah</th>
+                <th>Potensi</th>
+                <th>Dirasakan</th>
+                <th>Shakemap</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{ tanggal }}</td>
+                <td>{{ jam }}</td>
+                <td>{{ point }}</td>
+                <td>{{ magnitude }}</td>
+                <td>{{ kedalaman }}</td>
+                <td>{{ wilayah }}</td>
+                <td>{{ potensi }}</td>
+                <td>{{ dirasakan }}</td>
+                <td>{{ shakemap }}</td>
+            </tr>
+            </tbody>
+        </table>
+        <div>
+          <img src="https://data.bmkg.go.id/DataMKG/TEWS/{{ shakemap }}" alt=" {{shakemap}} ">
+        </div>
+    </div>
+{% endblock %}

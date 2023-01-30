@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gempa</title>
+</head>
+<body>
+    {% for gempa in gempas %}
+        <h2>Gempa Tanggal: {{gempa.Tanggal}}</h2>
+        <p>Jam: {{gempa.Jam}}</p>
+        <p>Lintang: {{gempa.Lintang}}</p>
+        <p>Bujur: {{gempa.Bujur}}</p>
+        <p>Magnitude: {{gempa.Magnitude}}</p>
+        <p>Kedalaman: {{gempa.Kedalaman}}</p>
+        <p>Wilayah: {{gempa.Wilayah}}</p>
+        <p>Dirasakan: {{gempa.Dirasakan}}</p>
+    {% endfor %}
+</body>
+</html>
