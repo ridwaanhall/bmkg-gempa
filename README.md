@@ -1,1 +1,1 @@
-# bmkg-gempa
+tinggal download --> run gempa.py --> uudah
